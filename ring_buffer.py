@@ -5,6 +5,8 @@ import itertools
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
+
+
 class RingBuffer:
     def __init__(self, size):
         """Initialize the ring buffer with a fixed size."""
@@ -128,10 +130,9 @@ class LivePlotter:
             frames=itertools.count(),
             init_func=self.init_animation,
             interval=self.interval,
-            blit=True
+            blit=True,
         )
         plt.show()
-
 
 class SignalGenerator:
     def __init__(self, buffer, sample_rate=1000.0, func=None):
